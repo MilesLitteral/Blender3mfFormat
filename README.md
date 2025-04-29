@@ -4,6 +4,8 @@ This is a Blender add-on that allows importing and exporting 3MF files.
 
 3D Manufacturing Format files (.3mf) are a file format for triangular meshes intended to serve as exchange format for 3D printing applications. They can communicate not only the model, but also the intent and material of a 3D printing job from the CAD software to the CAM software (slicer). In this scenario, Blender serves as the CAD software. To that end, the aim of this add-on is to make Blender a more viable alternative as CAD software for additive manufacturing.
 
+This branch implements a series of edits so that the plugin no longer defines custom __init__() functions or uses any such behavior. This is to keep the plugin inline with Standards & Practices as Blender no longer allows plugins to define custom initialization behavior. 
+
 Installation
 ----
 This add-on requires Blender 2.80 or newer. It is tested on version 2.80, 2.83, 2.93 3.0 and 3.3.
