@@ -60,7 +60,8 @@ class Import3MF(bpy.types.Operator, bpy_extras.io_utils.ImportHelper):
     directory: bpy.props.StringProperty(subtype='DIR_PATH')
     global_scale: bpy.props.FloatProperty(name="Scale", default=1.0, soft_min=0.001, soft_max=1000.0, min=1e-6, max=1e6)
 
-    def __init__(self):
+    #NO LONGER PERMITTED
+    '''def __init__(self):
         """
         Initializes the importer with empty fields.
         """
@@ -74,7 +75,8 @@ class Import3MF(bpy.types.Operator, bpy_extras.io_utils.ImportHelper):
         self.resource_to_material = {}
 
         self.num_loaded = 0
-
+    '''
+    
     def execute(self, context):
         """
         The main routine that reads out the 3MF file.
@@ -462,7 +464,7 @@ class Import3MF(bpy.types.Operator, bpy_extras.io_utils.ImportHelper):
                 except KeyError:
                     log.warning(
                         f"Object with ID {objectid} refers to material collection {pid} with index {pindex}"
-                        f" which doesn't exist.")
+                        f"which doesn't exist.")
                 except ValueError:
                     log.warning(f"Object with ID {objectid} specifies material index {pindex}, which is not integer.")
 

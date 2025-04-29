@@ -68,7 +68,8 @@ class Export3MF(bpy.types.Operator, bpy_extras.io_utils.ExportHelper):
         min=0,
         max=12)
 
-    def __init__(self):
+    #NO LONGER PERMITTED
+    '''def __init__(self):
         """
         Initialize some fields with defaults before starting.
         """
@@ -77,6 +78,7 @@ class Export3MF(bpy.types.Operator, bpy_extras.io_utils.ExportHelper):
         self.num_written = 0  # How many objects we've written to the file.
         self.material_resource_id = -1  # We write one material. This is the resource ID of that material.
         self.material_name_to_index = {}  # For each material in Blender, the index in the 3MF materials group.
+    '''
 
     def execute(self, context):
         """
